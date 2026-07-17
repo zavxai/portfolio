@@ -49,7 +49,7 @@ AI/RAG: LlamaIndex, FAISS, OpenAI, Ollama. Languages: TypeScript, Python. Backen
       "subtrackr", "github", "demo", "live",
     ],
     content: `== PROJECTS ==
-1. PG RAG — RAG pipeline with query rewriting, FAISS semantic search, NDJSON streaming. Stack: LlamaIndex, FastAPI, FAISS, Ollama. github.com/johnvesslyalti/rag-paulgraham
+1. PG RAG — RAG pipeline with query rewriting, FAISS semantic search, NDJSON streaming. Stack: LlamaIndex, FastAPI, FAISS, Ollama. github.com/zavxai/rag-paulgraham
 2. DevNest — NestJS social backend: JWT auth, token rotation, Google OAuth, cursor-paginated feeds, Redis cache, BullMQ email workers, Piscina bcrypt, Jest E2E. Live: dev-nest-4hxb.onrender.com/api/docs
 3. XOXO — Multiplayer Tic-Tac-Toe: Nakama authoritative server, WebSocket <100ms latency, Docker. Live: tic-tac-toe.johnvesslyalti.xyz
 4. LiftLog — Fitness analytics: normalized PostgreSQL schema, aggregation SQL, <120ms latency. Live: johnvesslyalti-liftlog.vercel.app
@@ -62,7 +62,7 @@ AI/RAG: LlamaIndex, FAISS, OpenAI, Ollama. Languages: TypeScript, Python. Backen
       "youtube", "social", "hire", "connect", "get in touch", "dm", "message",
     ],
     content: `== CONTACT ==
-Email: altijohnvessly@gmail.com | LinkedIn: linkedin.com/in/johnvesslyalti-ai-engineer | GitHub: github.com/johnvesslyalti | Twitter/YouTube: @zavxai`,
+Email: altijohnvessly@gmail.com | LinkedIn: linkedin.com/in/zavxai | GitHub: github.com/zavxai | Twitter/YouTube: @zavxai`,
   },
   {
     name: "BLOGS",

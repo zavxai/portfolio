@@ -4,8 +4,8 @@ import { Mail } from "lucide-react";
 export default function Contact() {
   const contact = [
     { name: "Email", link: "mailto:altijohnvessly@gmail.com", icon: <Mail className="w-7 h-7 sm:w-6 sm:h-6" /> },
-    { name: "LinkedIn", link: "https://www.linkedin.com/in/johnvesslyalti-ai-engineer", icon: <FaLinkedin className="w-7 h-7 sm:w-6 sm:h-6" /> },
-    { name: "GitHub", link: "https://github.com/johnvesslyalti", icon: <FaGithub className="w-7 h-7 sm:w-6 sm:h-6" /> },
+    { name: "LinkedIn", link: "https://www.linkedin.com/in/zavxai", icon: <FaLinkedin className="w-7 h-7 sm:w-6 sm:h-6" /> },
+    { name: "GitHub", link: "https://github.com/zavxai", icon: <FaGithub className="w-7 h-7 sm:w-6 sm:h-6" /> },
     { name: "X (Twitter)", link: "https://x.com/zavxai", icon: <FaXTwitter className="w-7 h-7 sm:w-6 sm:h-6" /> },
   ];
 

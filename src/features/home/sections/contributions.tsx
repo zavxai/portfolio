@@ -40,7 +40,7 @@ export default function Contributions() {
       repoUrl: "https://github.com/AkkalDhami/servercn",
       prTitle: "feat: add postgres component with drizzle ORM integration",
       prNumber: "PRs",
-      prUrl: "https://github.com/AkkalDhami/servercn/pulls?q=is%3Apr+author%3Ajohnvesslyalti",
+      prUrl: "https://github.com/AkkalDhami/servercn/pulls?q=is%3Apr+author%3Azavxai",
       status: "Merged",
       description: "Contributed the core PostgreSQL adapter component integrated with Drizzle ORM. Configured connection pooling, schema generation templates, and robust database migration utilities to enable developers to scaffold database layers instantly.",
       tech: ["TypeScript", "Drizzle ORM", "PostgreSQL", "Node.js"],

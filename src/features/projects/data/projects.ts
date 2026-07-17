@@ -2,7 +2,7 @@ export const projects = [
   {
     name: "Inferr",
     src: "/projects/inferr.mp4",
-    github: "https://github.com/johnvesslyalti/inferr",
+    github: "https://github.com/zavxai/inferr",
     live: "https://inferr.xyz",
     shortDescription:
       "Personalized AI developer news feed with 10-source ingestion, pgvector semantic ranking, LangGraph agentic RAG with self-correction, and a secure MCP server (OAuth 2.1 + PKCE) that exposes tools for AI agents like Claude.",
@@ -26,7 +26,7 @@ export const projects = [
   {
     name: "DevNest",
     src: "/projects/devnest.mp4",
-    github: "https://github.com/johnvesslyalti/dev-nest",
+    github: "https://github.com/zavxai/dev-nest",
     shortDescription:
       "Modular NestJS backend for a social platform with dedicated auth, posts, comments, likes, feed, profile, email, and shared infrastructure layers backed by PostgreSQL as the system of record.",
     detailedDescription:
@@ -46,7 +46,7 @@ export const projects = [
   {
     name: "PG RAG",
     src: "/projects/pg-rag.mp4",
-    github: "https://github.com/johnvesslyalti/rag-paulgraham",
+    github: "https://github.com/zavxai/rag-paulgraham",
     shortDescription:
       "Bleeding-edge RAG system featuring an intelligent query rewriter, semantic search via FAISS, and real-time streaming responses.",
     detailedDescription:

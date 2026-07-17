@@ -15,13 +15,13 @@ const SUGGESTIONS = [
 
 const CANNED: Record<string, string> = {
   "What has John built?":
-    "John has built 5 projects: PG RAG (a full RAG pipeline with FAISS semantic search and real-time streaming), DevNest (a modular NestJS social platform with JWT auth, Redis caching, and BullMQ workers), XOXO (real-time multiplayer Tic-Tac-Toe using Nakama game server), LiftLog (a fitness analytics platform with optimized PostgreSQL queries), and SubTrackr (a multi-tenant subscription SaaS). You can find them all on his GitHub: github.com/johnvesslyalti.",
+    "John has built 5 projects: PG RAG (a full RAG pipeline with FAISS semantic search and real-time streaming), DevNest (a modular NestJS social platform with JWT auth, Redis caching, and BullMQ workers), XOXO (real-time multiplayer Tic-Tac-Toe using Nakama game server), LiftLog (a fitness analytics platform with optimized PostgreSQL queries), and SubTrackr (a multi-tenant subscription SaaS). You can find them all on his GitHub: github.com/zavxai.",
 
   "What tech does he work with?":
     "John works across the AI and backend stack — LlamaIndex, FAISS, OpenAI, and Ollama on the AI/RAG side; TypeScript, Python, Node.js, NestJS, and FastAPI for backend; PostgreSQL, Redis, and Prisma for data; Next.js and Tailwind CSS on the frontend; and Docker and AWS for DevOps.",
 
   "How do I get in touch with him?":
-    "You can reach John at altijohnvessly@gmail.com, connect on LinkedIn (linkedin.com/in/johnvesslyalti-ai-engineer), follow him on GitHub (github.com/johnvesslyalti) or X (@zavxai), and watch his content on YouTube (@zavxai).",
+    "You can reach John at altijohnvessly@gmail.com, connect on LinkedIn (linkedin.com/in/zavxai), follow him on GitHub (github.com/zavxai) or X (@zavxai), and watch his content on YouTube (@zavxai).",
 
   "What's he good at?":
     "John specializes in AI architecture, scalability, and performance — specifically building production-grade RAG pipelines, agentic systems, and LLM-powered features that go beyond demos. He thinks in systems: how context flows, where models fail, and how to engineer around those limits with the right retrieval, memory, and tooling strategies.",

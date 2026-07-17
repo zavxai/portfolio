@@ -16,12 +16,12 @@ export default function GitHub() {
           <h2 className="text-xl font-semibold">GitHub Contributions</h2>
         </div>
         <a
-          href="https://github.com/johnvesslyalti"
+          href="https://github.com/zavxai"
           target="_blank"
           rel="noopener noreferrer"
           className="hidden sm:block text-xs text-neutral-400 dark:text-neutral-500 hover:text-neutral-700 dark:hover:text-neutral-300 transition-colors"
         >
-          @johnvesslyalti
+          @zavxai
         </a>
       </div>
 
@@ -33,7 +33,7 @@ export default function GitHub() {
       {/* Calendar */}
       <div className="github-calendar-wrapper w-full">
         <GitHubCalendar
-          username="johnvesslyalti"
+          username="zavxai"
           blockSize={11}
           blockMargin={4}
           fontSize={12}
