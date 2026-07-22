@@ -49,11 +49,11 @@ AI/RAG: LlamaIndex, FAISS, OpenAI, Ollama. Languages: TypeScript, Python. Backen
       "subtrackr", "github", "demo", "live",
     ],
     content: `== PROJECTS ==
-1. PG RAG — RAG pipeline with query rewriting, FAISS semantic search, NDJSON streaming. Stack: LlamaIndex, FastAPI, FAISS, Ollama. github.com/zavxai/rag-paulgraham
-2. DevNest — NestJS social backend: JWT auth, token rotation, Google OAuth, cursor-paginated feeds, Redis cache, BullMQ email workers, Piscina bcrypt, Jest E2E. Live: dev-nest-4hxb.onrender.com/api/docs
-3. XOXO — Multiplayer Tic-Tac-Toe: Nakama authoritative server, WebSocket <100ms latency, Docker. Live: tic-tac-toe.johnvesslyalti.xyz
-4. LiftLog — Fitness analytics: normalized PostgreSQL schema, aggregation SQL, <120ms latency. Live: johnvesslyalti-liftlog.vercel.app
-5. SubTrackr — Multi-tenant subscription SaaS: tenant isolation, OAuth, concurrency-safe CRUD. Live: johnvesslyalti-subtrackr.vercel.app`,
+1. PG RAG - RAG pipeline with query rewriting, FAISS semantic search, NDJSON streaming. Stack: LlamaIndex, FastAPI, FAISS, Ollama. github.com/zavxai/rag-paulgraham
+2. DevNest - NestJS social backend: JWT auth, token rotation, Google OAuth, cursor-paginated feeds, Redis cache, BullMQ email workers, Piscina bcrypt, Jest E2E. Live: dev-nest-4hxb.onrender.com/api/docs
+3. XOXO - Multiplayer Tic-Tac-Toe: Nakama authoritative server, WebSocket <100ms latency, Docker. Live: tic-tac-toe.johnvesslyalti.xyz
+4. LiftLog - Fitness analytics: normalized PostgreSQL schema, aggregation SQL, <120ms latency. Live: johnvesslyalti-liftlog.vercel.app
+5. SubTrackr - Multi-tenant subscription SaaS: tenant isolation, OAuth, concurrency-safe CRUD. Live: johnvesslyalti-subtrackr.vercel.app`,
   },
   {
     name: "CONTACT",

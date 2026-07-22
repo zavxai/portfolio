@@ -23,7 +23,7 @@ export default function Technologies() {
     "AI & RAG": [
       {
         name: "LangGraph",
-        icon: <Workflow className="w-4 h-4" />,
+        icon: <Workflow className="w-3.5 h-3.5" />,
         link: "https://www.langchain.com/langgraph",
       },
       {
@@ -33,28 +33,28 @@ export default function Technologies() {
       },
       {
         name: "LlamaIndex",
-        icon: <Bot className="w-4 h-4" />,
+        icon: <Bot className="w-3.5 h-3.5" />,
         link: "https://www.llamaindex.ai/",
       },
       {
         name: "MCP",
-        icon: <Workflow className="w-4 h-4" />,
+        icon: <Workflow className="w-3.5 h-3.5" />,
         link: "https://modelcontextprotocol.io/",
       },
     ],
-    "AI EVALUATIONS": [
+    "AI Evaluations": [
       {
         name: "Langfuse",
-        icon: <Bot className="w-4 h-4" />,
+        icon: <Bot className="w-3.5 h-3.5" />,
         link: "https://langfuse.com/",
       },
       {
-        name: "Langsmith",
-        icon: <Workflow className="w-4 h-4" />,
+        name: "LangSmith",
+        icon: <Workflow className="w-3.5 h-3.5" />,
         link: "https://www.langchain.com/langsmith",
       },
     ],
-    BACKEND: [
+    Backend: [
       {
         name: "Node.js",
         icon: <SiNodedotjs />,
@@ -71,7 +71,7 @@ export default function Technologies() {
         link: "https://fastapi.tiangolo.com/",
       },
     ],
-    DATABASE: [
+    Database: [
       {
         name: "PostgreSQL",
         icon: <SiPostgresql />,
@@ -79,7 +79,7 @@ export default function Technologies() {
       },
       {
         name: "pgvector",
-        icon: <Database className="w-4 h-4" />,
+        icon: <Database className="w-3.5 h-3.5" />,
         link: "https://github.com/pgvector/pgvector",
       },
       {
@@ -88,7 +88,7 @@ export default function Technologies() {
         link: "https://redis.io/",
       },
     ],
-    DEVOPS: [
+    DevOps: [
       {
         name: "Kubernetes",
         icon: <SiKubernetes />,
@@ -105,49 +105,47 @@ export default function Technologies() {
         link: "https://aws.amazon.com/",
       },
     ],
-    OBSERVABILITY: [
+    Observability: [
       {
         name: "OpenTelemetry",
-        icon: <Workflow className="w-4 h-4" />,
+        icon: <Workflow className="w-3.5 h-3.5" />,
         link: "https://opentelemetry.io/",
       },
     ],
   };
 
   return (
-    <section className="rounded-2xl p-5
-                        bg-white/10 dark:bg-white/5
-                        backdrop-blur-2xl
-                        border border-white/30 dark:border-white/10
-                        shadow-[0_8px_32px_rgba(0,0,0,0.10)]">
-      <h2 className="text-xl font-semibold mb-3 border-b border-neutral-200 dark:border-neutral-800 pb-3">
-        Technologies
+    <section id="technologies" className="scroll-mt-24">
+      <p className="section-label mb-3">Stack</p>
+      <h2 className="section-title mb-8 max-w-xl">
+        Tools I use to
+        <br />
+        <span className="text-neutral-500">ship reliable AI.</span>
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {Object.entries(technologies).map(([category, items]) => (
-          <div key={category} className="flex flex-col gap-2.5">
-            <h3 className="text-[10px] font-bold text-neutral-400 dark:text-neutral-500 uppercase tracking-widest">
+          <div key={category} className="flex flex-col gap-3">
+            <h3 className="text-[11px] font-medium uppercase tracking-[0.18em] text-neutral-500">
               {category}
             </h3>
             <div className="flex flex-wrap gap-2">
               {items.map((tech, index) => {
                 const badge = (
-                  <span className="flex items-center gap-2 px-3 py-1.5 text-sm font-medium rounded-xl
-                                   bg-white/20 dark:bg-white/8
-                                   border border-white/30 dark:border-white/10
-                                   text-neutral-700 dark:text-neutral-300
-                                   hover:bg-white/30 dark:hover:bg-white/15
-                                   hover:scale-105
-                                   transition-all duration-200 backdrop-blur-sm cursor-pointer">
-                    <span className="text-base">{tech.icon}</span>
+                  <span className="inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.03] px-3.5 py-1.5 text-[13px] font-medium text-neutral-300 transition-all duration-200 hover:border-white/20 hover:bg-white/[0.06] hover:text-white">
+                    <span className="text-sm opacity-80">{tech.icon}</span>
                     <span>{tech.name}</span>
                   </span>
                 );
 
                 if (tech.link) {
                   return (
-                    <a key={index} href={tech.link} target="_blank" rel="noopener noreferrer">
+                    <a
+                      key={index}
+                      href={tech.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       {badge}
                     </a>
                   );

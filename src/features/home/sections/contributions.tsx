@@ -6,7 +6,7 @@ import {
   ExternalLink,
   GitMerge,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
 } from "lucide-react";
 import { FaGithub } from "react-icons/fa6";
 
@@ -28,11 +28,13 @@ export default function Contributions() {
     {
       repo: "SigNoz/signoz",
       repoUrl: "https://github.com/SigNoz/signoz",
-      prTitle: "fix(alerts): set default time range to 5m on create alert page",
+      prTitle:
+        "fix(alerts): set default time range to 5m on create alert page",
       prNumber: "#11601",
       prUrl: "https://github.com/SigNoz/signoz/pull/11601",
       status: "Open",
-      description: "Identified ClickHouse Out-of-Memory (OOM) errors caused by default 6-hour high-cardinality queries during new alert creation. Optimized performance by reducing the default time range to 5 minutes, mitigating backend memory spikes in production scale environments.",
+      description:
+        "Identified ClickHouse Out-of-Memory (OOM) errors caused by default 6-hour high-cardinality queries during new alert creation. Optimized performance by reducing the default time range to 5 minutes, mitigating backend memory spikes in production scale environments.",
       tech: ["TypeScript", "React", "ClickHouse", "Alerting Systems"],
     },
     {
@@ -40,19 +42,25 @@ export default function Contributions() {
       repoUrl: "https://github.com/AkkalDhami/servercn",
       prTitle: "feat: add postgres component with drizzle ORM integration",
       prNumber: "PRs",
-      prUrl: "https://github.com/AkkalDhami/servercn/pulls?q=is%3Apr+author%3Azavxai",
+      prUrl:
+        "https://github.com/AkkalDhami/servercn/pulls?q=is%3Apr+author%3Azavxai",
       status: "Merged",
-      description: "Contributed the core PostgreSQL adapter component integrated with Drizzle ORM. Configured connection pooling, schema generation templates, and robust database migration utilities to enable developers to scaffold database layers instantly.",
+      description:
+        "Contributed the core PostgreSQL adapter component integrated with Drizzle ORM. Configured connection pooling, schema generation templates, and robust database migration utilities to enable developers to scaffold database layers instantly.",
       tech: ["TypeScript", "Drizzle ORM", "PostgreSQL", "Node.js"],
-    }
+    },
   ];
 
   const handlePrev = () => {
-    setActiveIndex((prev) => (prev === 0 ? contributions.length - 1 : prev - 1));
+    setActiveIndex((prev) =>
+      prev === 0 ? contributions.length - 1 : prev - 1
+    );
   };
 
   const handleNext = () => {
-    setActiveIndex((prev) => (prev === contributions.length - 1 ? 0 : prev + 1));
+    setActiveIndex((prev) =>
+      prev === contributions.length - 1 ? 0 : prev + 1
+    );
   };
 
   const currentContrib = contributions[activeIndex];
@@ -60,83 +68,71 @@ export default function Contributions() {
   const getStatusBadge = (status: "Open" | "Merged") => {
     if (status === "Merged") {
       return (
-        <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800 dark:bg-purple-950/40 dark:text-purple-300 border border-purple-200 dark:border-purple-900/40 shadow-xs">
-          <GitMerge className="w-3.5 h-3.5" />
+        <span className="inline-flex items-center gap-1.5 rounded-full border border-purple-500/20 bg-purple-500/10 px-2.5 py-0.5 text-xs font-medium text-purple-300">
+          <GitMerge className="h-3.5 w-3.5" />
           Merged
         </span>
       );
     }
     return (
-      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-900/40 shadow-xs">
-        <GitPullRequest className="w-3.5 h-3.5" />
+      <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-2.5 py-0.5 text-xs font-medium text-emerald-300">
+        <GitPullRequest className="h-3.5 w-3.5" />
         Open
       </span>
     );
   };
 
   return (
-    <section className="rounded-2xl p-6
-                        bg-white/10 dark:bg-white/5
-                        backdrop-blur-2xl
-                        border border-white/30 dark:border-white/10
-                        shadow-[0_8px_32px_rgba(0,0,0,0.10)]">
-      
-      {/* Header Row */}
-      <div className="flex items-center justify-between gap-4 border-b border-neutral-200 dark:border-neutral-800 mb-5 pb-3">
-        <h2 className="text-base sm:text-lg md:text-xl font-semibold flex items-center gap-2 text-neutral-900 dark:text-neutral-100 min-w-0 leading-tight">
-          <GitPullRequest className="text-emerald-500 dark:text-emerald-400 w-5 h-5 shrink-0" />
-          <span>Open Source Contributions</span>
-        </h2>
+    <section id="contributions" className="scroll-mt-24">
+      <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p className="section-label mb-3">Open source</p>
+          <h2 className="section-title">
+            Contributions
+            <br />
+            <span className="text-neutral-500">that matter.</span>
+          </h2>
+        </div>
 
-        {/* Slideshow Controls */}
-        <div className="flex items-center gap-1.5 shrink-0">
+        <div className="flex items-center gap-2 self-start sm:self-auto">
           <button
             onClick={handlePrev}
-            className="p-1 rounded-lg bg-white/10 dark:bg-white/5 border border-white/20 dark:border-white/10 hover:bg-white/20 dark:hover:bg-white/10 transition cursor-pointer shrink-0"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-neutral-300 transition hover:border-white/20 hover:bg-white/[0.06] hover:text-white"
             aria-label="Previous contribution"
           >
-            <ChevronLeft className="w-4 h-4 text-neutral-700 dark:text-neutral-300" />
+            <ChevronLeft className="h-4 w-4" />
           </button>
-          
-          <span className="text-xs font-medium text-neutral-500 dark:text-neutral-400 font-mono px-1 shrink-0 whitespace-nowrap select-none">
+          <span className="min-w-[3rem] text-center font-mono text-xs text-neutral-500">
             {activeIndex + 1} / {contributions.length}
           </span>
-
           <button
             onClick={handleNext}
-            className="p-1 rounded-lg bg-white/10 dark:bg-white/5 border border-white/20 dark:border-white/10 hover:bg-white/20 dark:hover:bg-white/10 transition cursor-pointer shrink-0"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-neutral-300 transition hover:border-white/20 hover:bg-white/[0.06] hover:text-white"
             aria-label="Next contribution"
           >
-            <ChevronRight className="w-4 h-4 text-neutral-700 dark:text-neutral-300" />
+            <ChevronRight className="h-4 w-4" />
           </button>
         </div>
       </div>
 
-      {/* Card Content with Key to force re-render/animation on index change */}
       <div
         key={activeIndex}
-        className="group flex flex-col p-4 rounded-xl
-                   bg-white/5 dark:bg-white/2
-                   border border-white/10 dark:border-white/5
-                   hover:border-white/30 dark:hover:border-white/15
-                   hover:shadow-[0_4px_24px_rgba(0,0,0,0.12)]
-                   transition-all duration-300 animate-in fade-in duration-300"
+        className="surface animate-in fade-in p-6 duration-300 sm:p-8"
       >
-        {/* Header */}
-        <div className="flex flex-wrap items-start justify-between gap-3 mb-2.5">
+        <div className="mb-4 flex flex-wrap items-start justify-between gap-3">
           <div>
             <a
               href={currentContrib.repoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs font-bold text-neutral-500 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200 transition-colors flex items-center gap-1.5"
+              className="inline-flex items-center gap-1.5 text-xs font-medium text-neutral-500 transition-colors hover:text-white"
             >
-              <FaGithub className="w-3.5 h-3.5" />
+              <FaGithub className="h-3.5 w-3.5" />
               {currentContrib.repo}
             </a>
-            <h3 className="text-base font-semibold mt-1 text-neutral-900 dark:text-neutral-100 flex items-center gap-1.5 flex-wrap">
+            <h3 className="mt-2 max-w-2xl text-base font-medium leading-snug tracking-tight text-white sm:text-lg">
               {currentContrib.prTitle}{" "}
-              <span className="text-neutral-400 dark:text-neutral-500 font-mono text-sm font-normal">
+              <span className="font-mono text-sm font-normal text-neutral-500">
                 {currentContrib.prNumber}
               </span>
             </h3>
@@ -144,21 +140,16 @@ export default function Contributions() {
           {getStatusBadge(currentContrib.status)}
         </div>
 
-        {/* Description */}
-        <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-4 min-h-[80px] sm:min-h-[60px]">
+        <p className="text-body mb-6 min-h-[72px] max-w-3xl">
           {currentContrib.description}
         </p>
 
-        {/* Footer / Tech list & link */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mt-auto pt-4 border-t border-neutral-200/50 dark:border-white/5">
+        <div className="flex flex-col gap-4 border-t border-white/[0.06] pt-5 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex flex-wrap gap-1.5">
             {currentContrib.tech.map((t, idx) => (
               <span
                 key={idx}
-                className="px-2 py-0.5 text-[10px] font-medium rounded-md
-                           bg-neutral-100 dark:bg-neutral-800/60
-                           text-neutral-600 dark:text-neutral-400
-                           border border-neutral-200/50 dark:border-neutral-700/50"
+                className="rounded-full border border-white/[0.08] bg-white/[0.03] px-2.5 py-0.5 text-[11px] font-medium text-neutral-400"
               >
                 {t}
               </span>
@@ -169,14 +160,10 @@ export default function Contributions() {
             href={currentContrib.prUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold
-                       bg-white/10 dark:bg-white/5 
-                       text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white
-                       border border-white/20 dark:border-white/10 hover:bg-white/20 dark:hover:bg-white/10
-                       transition-all duration-200 cursor-pointer"
+            className="btn-ghost !px-4 !py-2"
           >
-            <span>View Pull Request</span>
-            <ExternalLink className="w-3.5 h-3.5" />
+            <span>View pull request</span>
+            <ExternalLink className="h-3.5 w-3.5" />
           </a>
         </div>
       </div>

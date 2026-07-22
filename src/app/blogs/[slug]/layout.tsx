@@ -21,80 +21,67 @@ export default async function BlogPostLayout({
   }
 
   const prevBlog = blogIndex > 0 ? blogs[blogIndex - 1] : null;
-  const nextBlog =
-    blogIndex < blogs.length - 1 ? blogs[blogIndex + 1] : null;
+  const nextBlog = blogIndex < blogs.length - 1 ? blogs[blogIndex + 1] : null;
 
   return (
-    <section className="py-6">
-      <div className="max-w-2xl mx-auto px-4">
+    <section className="mx-auto w-full max-w-3xl min-w-0 px-4 pb-20 pt-8 sm:px-8 sm:pb-24 sm:pt-10">
+      <Link
+        href="/blogs"
+        className="mb-6 inline-flex items-center gap-1.5 text-sm text-neutral-500 transition-colors hover:text-white sm:mb-8"
+      >
+        <IoIosArrowBack className="text-base" />
+        All posts
+      </Link>
 
-        {/* Header Photo */}
-        {("heroImage" in blog) && blog.heroImage && (
-          <div className="mb-6 w-full rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-700">
-            <Image
-              src={blog.heroImage as string}
-              alt={blog.title}
-              width={800}
-              height={450}
-              priority
-              className="w-full h-auto object-cover"
-            />
-          </div>
+      {"heroImage" in blog && blog.heroImage && (
+        <div className="mb-6 w-full overflow-hidden rounded-xl border border-white/[0.08] sm:mb-8 sm:rounded-2xl">
+          <Image
+            src={blog.heroImage as string}
+            alt={blog.title}
+            width={800}
+            height={450}
+            priority
+            className="h-auto w-full object-cover"
+          />
+        </div>
+      )}
+
+      <header className="mb-8 border-b border-white/[0.08] pb-6 sm:mb-10 sm:pb-8">
+        <p className="section-label mb-3 sm:mb-4">
+          {blog.date}
+          {blog.readingTime ? ` · ${blog.readingTime}` : ""}
+        </p>
+        <h1 className="text-2xl font-medium leading-tight tracking-tight text-white sm:text-3xl md:text-4xl">
+          {blog.title}
+        </h1>
+      </header>
+
+      <article className="max-w-none min-w-0 overflow-x-hidden">{children}</article>
+
+      <div className="mt-12 grid grid-cols-1 gap-3 border-t border-white/[0.08] pt-6 sm:mt-16 sm:grid-cols-2 sm:pt-8">
+        {prevBlog ? (
+          <Link
+            href={`/blogs/${prevBlog.slug}`}
+            className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-4 transition-all hover:border-white/15 hover:bg-white/[0.04] sm:p-5"
+          >
+            <p className="mb-1.5 text-xs text-neutral-500">← Previous</p>
+            <p className="text-sm font-medium text-white">{prevBlog.title}</p>
+          </Link>
+        ) : (
+          <div />
         )}
 
-        {/* Header */}
-        <div className="relative mb-8">
+        {nextBlog ? (
           <Link
-            href="/blogs"
-            className="absolute hidden md:block left-4 top-1/2 -translate-y-1/2 text-2xl hover:opacity-70 transition"
+            href={`/blogs/${nextBlog.slug}`}
+            className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-4 text-left transition-all hover:border-white/15 hover:bg-white/[0.04] sm:p-5 sm:text-right"
           >
-            <IoIosArrowBack />
+            <p className="mb-1.5 text-xs text-neutral-500">Next →</p>
+            <p className="text-sm font-medium text-white">{nextBlog.title}</p>
           </Link>
-
-          <div className="border border-neutral-200 dark:border-neutral-700 rounded-xl py-3 px-4">
-            <h1 className="text-xl md:text-2xl font-semibold text-center">
-              {blog.title}
-            </h1>
-            <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2 text-center">
-              {blog.date} • {blog.readingTime}
-            </p>
-          </div>
-        </div>
-
-        {/* Blog Content */}
-        {children}
-
-        {/* Previous / Next */}
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {prevBlog ? (
-            <Link
-              href={`/blogs/${prevBlog.slug}`}
-              className="border border-neutral-200 dark:border-neutral-700 rounded-xl p-4 hover:bg-neutral-100 dark:hover:bg-neutral-900 transition"
-            >
-              <p className="text-xs text-neutral-600 dark:text-neutral-400 mb-1">← Previous</p>
-              <p className="text-sm font-medium text-neutral-800 dark:text-neutral-200">
-                {prevBlog.title}
-              </p>
-            </Link>
-          ) : (
-            <div />
-          )}
-
-          {nextBlog ? (
-            <Link
-              href={`/blogs/${nextBlog.slug}`}
-              className="border border-neutral-200 dark:border-neutral-700 rounded-xl p-4 hover:bg-neutral-100 dark:hover:bg-neutral-900 transition text-right"
-            >
-              <p className="text-xs text-neutral-600 dark:text-neutral-400 mb-1">Next →</p>
-              <p className="text-sm font-medium text-neutral-800 dark:text-neutral-200">
-                {nextBlog.title}
-              </p>
-            </Link>
-          ) : (
-            <div />
-          )}
-        </div>
-
+        ) : (
+          <div />
+        )}
       </div>
     </section>
   );

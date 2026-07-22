@@ -10,7 +10,7 @@ export const blogs = [
     {
         slug: "building-mcp-server-oauth2-nestjs",
         title: "Building a Production MCP Server with OAuth 2.1 in NestJS",
-        description: "How I built a full OAuth 2.1 authorization server inside NestJS to secure an MCP server — PKCE, token isolation, reuse detection, and per-user sandboxing.",
+        description: "How I built a full OAuth 2.1 authorization server inside NestJS to secure an MCP server - PKCE, token isolation, reuse detection, and per-user sandboxing.",
         date: "Jun 8, 2026",
         readingTime: "7 mins read"
     },
