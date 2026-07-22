@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Inter } from "next/font/google";
-import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@vercel/analytics/next";
 import Footer from "@/components/footer";
 
@@ -36,19 +35,11 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-screen min-w-0 overflow-x-hidden font-sans antialiased">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem={false}
-          forcedTheme="dark"
-          disableTransitionOnChange
-        >
-          <div className="page-glow min-h-screen min-w-0">
-            {children}
-            <Footer />
-            <Analytics />
-          </div>
-        </ThemeProvider>
+        <div className="page-glow min-h-screen min-w-0">
+          {children}
+          <Footer />
+          <Analytics />
+        </div>
       </body>
     </html>
   );

@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { blogs } from "@/features/blogs/data/blogs";
 import { IoIosArrowBack } from "react-icons/io";
-import { Button } from "@/components/ui/button";
 
 function BlogsContent() {
   const router = useRouter();
@@ -73,27 +72,25 @@ function BlogsContent() {
 
       {totalPages > 1 && (
         <div className="mt-10 flex flex-wrap items-center justify-center gap-3 sm:mt-12 sm:gap-4">
-          <Button
-            variant="outline"
-            size="sm"
+          <button
+            type="button"
             disabled={page <= 1}
             onClick={() => handlePageChange(page - 1)}
-            className="rounded-full border-white/10 bg-transparent text-neutral-300 hover:bg-white/5 hover:text-white"
+            className="rounded-full border border-white/10 bg-transparent px-4 py-1.5 text-sm text-neutral-300 transition hover:bg-white/5 hover:text-white disabled:cursor-not-allowed disabled:opacity-40"
           >
             Previous
-          </Button>
+          </button>
           <span className="font-mono text-sm text-neutral-500">
             {page} / {totalPages}
           </span>
-          <Button
-            variant="outline"
-            size="sm"
+          <button
+            type="button"
             disabled={page >= totalPages}
             onClick={() => handlePageChange(page + 1)}
-            className="rounded-full border-white/10 bg-transparent text-neutral-300 hover:bg-white/5 hover:text-white"
+            className="rounded-full border border-white/10 bg-transparent px-4 py-1.5 text-sm text-neutral-300 transition hover:bg-white/5 hover:text-white disabled:cursor-not-allowed disabled:opacity-40"
           >
             Next
-          </Button>
+          </button>
         </div>
       )}
     </div>
