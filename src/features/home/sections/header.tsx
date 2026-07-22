@@ -6,17 +6,17 @@ export default function Header() {
         className="pointer-events-none absolute left-1/2 top-1/3 -z-10 h-[280px] w-[min(100vw,720px)] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/[0.03] blur-3xl sm:h-[420px]"
       />
 
-      <p className="section-label mb-4 max-w-full text-[10px] leading-relaxed sm:mb-6 sm:text-[11px]">
+      <p className="mb-4 max-w-full text-[8px] font-medium uppercase leading-snug tracking-[0.12em] text-neutral-500 sm:mb-6 sm:text-[11px] sm:tracking-[0.2em]">
         AI Engineer · Agentic Systems · Production RAG
       </p>
 
-      <h1 className="max-w-4xl text-[2rem] font-medium leading-[1.08] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl animate-[fade-up_0.7s_ease-out_0.05s_both]">
+      <h1 className="max-w-3xl text-2xl font-medium leading-[1.15] tracking-tight text-white sm:text-3xl md:text-4xl animate-[fade-up_0.7s_ease-out_0.05s_both]">
         Building AI systems
         <br />
         <span className="text-neutral-500">that ship to production.</span>
       </h1>
 
-      <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-neutral-400 sm:mt-8 sm:text-lg animate-[fade-up_0.7s_ease-out_0.12s_both]">
+      <p className="mt-4 max-w-2xl text-sm leading-relaxed text-neutral-400 sm:mt-6 sm:text-base animate-[fade-up_0.7s_ease-out_0.12s_both]">
         I design agentic workflows, RAG pipelines, and MCP servers - then wire
         them into reliable TypeScript backends that teams can actually run.
         LangGraph, pgvector, NestJS, and OAuth 2.1 when agents need production

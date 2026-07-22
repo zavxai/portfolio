@@ -101,10 +101,10 @@
     @apply text-[11px] font-medium uppercase tracking-[0.2em] text-neutral-500;
   }
   .section-title {
-    @apply text-xl font-medium tracking-tight text-white sm:text-2xl md:text-3xl;
+    @apply text-lg font-medium tracking-tight text-white sm:text-xl md:text-2xl;
   }
   .text-body {
-    @apply text-[15px] leading-relaxed text-neutral-400;
+    @apply text-sm leading-relaxed text-neutral-400 sm:text-[15px];
   }
   .btn-primary {
     @apply inline-flex items-center justify-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-medium text-black transition-all duration-200 hover:bg-neutral-200 sm:px-6;

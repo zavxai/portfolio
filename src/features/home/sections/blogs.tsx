@@ -6,7 +6,7 @@ export default function Blogs() {
 
   return (
     <section id="blogs" className="scroll-mt-20 sm:scroll-mt-24">
-      <div className="mb-6 flex flex-col gap-4 sm:mb-8 sm:flex-row sm:items-end sm:justify-between">
+      <div className="mb-6 flex flex-row items-end justify-between gap-3 sm:mb-8 sm:gap-4">
         <div className="min-w-0">
           <p className="section-label mb-3">Writing</p>
           <h2 className="section-title">
@@ -17,7 +17,7 @@ export default function Blogs() {
         </div>
         <Link
           href="/blogs"
-          className="btn-secondary !px-5 !py-2 self-start sm:self-auto"
+          className="btn-secondary shrink-0 !px-3 !py-1.5 !text-xs sm:!px-5 sm:!py-2 sm:!text-sm"
         >
           All posts
           <span aria-hidden>→</span>
