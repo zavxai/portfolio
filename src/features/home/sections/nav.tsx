@@ -10,10 +10,10 @@ const links = [
 export default function Nav() {
   return (
     <header className="sticky top-0 z-40 w-full border-b border-white/[0.06] bg-black/70 backdrop-blur-xl">
-      <div className="mx-auto flex h-14 max-w-5xl items-center justify-between gap-3 px-4 sm:h-16 sm:px-8">
+      <div className="mx-auto flex h-16 max-w-5xl items-center justify-between gap-3 px-4 sm:h-[4.5rem] sm:px-8">
         <Link
           href="/"
-          className="min-w-0 shrink text-base font-bold tracking-tight text-white transition-opacity hover:opacity-80 sm:text-xl"
+          className="min-w-0 shrink text-2xl font-bold tracking-tight text-white transition-opacity hover:opacity-80 sm:text-2xl md:text-3xl"
         >
           Johnvessly Alti
         </Link>
